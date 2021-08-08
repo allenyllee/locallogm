@@ -1,0 +1,15 @@
+version: '3'
+services:
+  logspout:
+    image: gliderlabs/logspout:latest
+    restart: always
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+    command: syslog+udp://syslogng:514
+  syslogng:
+    image: balabit/syslog-ng:latest
+    restart: always
+    command: -F --no-caps
+    volumes:
+      - "/logs/:/var/log/syslogng/"
+      - "./syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf"
