@@ -13,7 +13,7 @@ services:
     command: -F --no-caps
     volumes:
       - "./syslogng:/syslogng"
-      - "/logs/:/var/log/syslogng/"
+      - "/logs:/var/log/syslogng"
       - "./syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf"
       # - "./rotate_and_flush.sh:/etc/cron.hourly/rotate_and_flush.sh"
       - "./syslogng-logrotate.conf:/etc/logrotate.d/syslogng-logrotate.conf"
