@@ -14,6 +14,6 @@ services:
     volumes:
       - "./syslogng:/syslogng"
       - "/logs:/var/log/syslogng"
-      - "./syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf"
+      # - "./syslog-ng.conf:/etc/syslog-ng/syslog-ng.conf"
       # - "./rotate_and_flush.sh:/etc/cron.hourly/rotate_and_flush.sh"
-      - "./syslogng-logrotate.conf:/etc/logrotate.d/syslogng-logrotate.conf"
+      # - "./syslogng-logrotate.conf:/etc/logrotate.d/syslogng-logrotate.conf"
